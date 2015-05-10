@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <style>
+
+      html,
+      body {
+         width: 100%;
+         height: 100%;
+         margin: 0;
+      }
+
+      #arenaCanvas {
+          display: block;
+          width: 100%;
+          height: 70%;
+          background-image:url("http://content.chupamobile.com/user-upload2/product-image-screenshot/Kt9JZSjh84SuZQtOptFd3xQj_3_bg3.png");/*("http://bestgameswallpapers.com/wp-content/uploads/2014/09/game-backgrounds-oe1u6nhl.jpg");  *//*("http://hqwallbase.com/images/big/mario_mario_bros_super_mario_super_mario_bros_maps_wallpaper-33069.jpg");*/
+      }
+
+      #gameCanvas{
+          margin-left: 1%;
+          margin-right: 1%;
+      }
+
+      #target{
+          color: red;
+          font-weight: bold;
+      }
+
+      #hits,#remaining-bullets{
+          font-weight: bold;
+      }
+
+      #shootButton{
+          width:100%;
+      }
+
+      .col-md-2{
+          margin-left: 2%;
+      }
+
+    </style>
+
+    <script src="js/GameEngine.js" type="text/javascript"></script>
+
+  </head>
+
+  <body background="" onload="triggerGame()">
+    <div class="row">
+       <div class="col-md-5"></div>
+       <div class="col-md-2" id="level">
+         <h2 id="game-level">LEVEL - </h2>
+       </div>
+    </div>
+
+    <div class="row">
+       <div class="col-md-3"></div>
+
+       <div class="col-md-2">
+         <p id="target">TARGET : </p>
+       </div>
+
+        <div class="col-md-2">
+         <p id="hits">SCORE : </p>
+        </div>
+
+        <div class="col-md-2">
+         <p id="remaining-bullets">BULLETS : </p>
+       </div>
+    </div>
+
+     <div class="row" id="gameCanvas">
+        <canvas id="arenaCanvas" width="1300" height="650" style="border:1px solid #000000;">
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+         <img width="0" height="0"/>
+     </div>
+
+     <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <button class="btn btn-lg btn-primary" id="shootButton" onclick="gun.shoot()">SHOOT</button>
+        </div>
+     </div>
+  </body>
+
+</html>
